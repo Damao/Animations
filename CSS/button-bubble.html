@@ -1,0 +1,74 @@
+<html>
+    <style>
+        body {
+ 
+}
+
+.bubbles {
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50px;
+  background: linear-gradient(101deg, rgba(3,183,182,1) 0%, rgba(124,164,254,1) 100%);
+}
+
+.bubbles:after,
+.bubbles:before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border:40px solid #fff;
+  border-radius:100%;
+  animation: animate 5s linear infinite;
+  right: 30px; 
+  top:50%;
+  transform: translate(-50px,-50%);
+  opacity:0;
+}
+
+.bubbles:before {
+  animation-delay: 0s;
+}
+
+.bubbles:after {
+  animation-delay: 1s;
+}
+
+
+@keyframes animate {
+  0% {
+    width:0;
+    height:0;
+    opacity: 0;
+    transform: translate(0,-50%);
+  }
+  80% {
+    width:0;
+    height:0;
+    opacity: 0;
+    transform: translate(0,-50%);
+  }
+  
+  90% {
+    width:70px;
+    height:70px;
+    opacity: 0.2;
+    transform: translate(35px,-50%);
+  }
+  
+  100% {
+    width:100px;
+    height:100px;
+    opacity: 0;
+    transform: translate(50px,-50%);
+  }
+}
+    </style>
+  <body>
+    <div class="bubbles">
+    </div>
+  </body>
+</html>
