@@ -5,8 +5,8 @@
 }
 
 .bubbles {
-  width: 200px;
-  height: 50px;
+  width: 580px; /*定义为W */
+  height: 100px; /*定义为H */
   overflow: hidden;
   position: relative;
   border-radius: 50px;
@@ -20,12 +20,12 @@
   display: block;
   width: 0;
   height: 0;
-  border:40px solid #fff;
-  border-radius:100%;
-  animation: animate 5s linear infinite;
-  right: 30px; 
+  border:25px solid #fff; /*0.5H */
+  border-radius:50%;
+  animation: animate 3s linear infinite;
+  left: 50%;
   top:50%;
-  transform: translate(-50px,-50%);
+  transform: translate(-50%,-50%);
   opacity:0;
 }
 
@@ -34,7 +34,9 @@
 }
 
 .bubbles:after {
-  animation-delay: 1s;
+    animation: animate2 3s linear infinite;
+    animation-delay: 0.4s;
+
 }
 
 
@@ -43,27 +45,61 @@
     width:0;
     height:0;
     opacity: 0;
-    transform: translate(0,-50%);
+    border-width:50px  /*0.5H */
+
   }
-  80% {
+  66% {
     width:0;
     height:0;
     opacity: 0;
-    transform: translate(0,-50%);
+      border-width:50px  /*0.5H */
   }
   
-  90% {
-    width:70px;
-    height:70px;
+  77% {
+    width:116px;
+    height:116px;
     opacity: 0.2;
-    transform: translate(35px,-50%);
+      border-width:75px  /*0.7H */
+
   }
   
   100% {
-    width:100px;
-    height:100px;
+    width:440px;
+    height:440px;
     opacity: 0;
-    transform: translate(50px,-50%);
+      border-width:40px  /*0.4H */
+
+  }
+}
+        @keyframes animate2 {
+  0% {
+    width:0;
+    height:0;
+    opacity: 0;
+    border-width:50px  /*0.5H */
+
+  }
+  66% {
+    width:0;
+    height:0;
+    opacity: 0;
+      border-width:50px  /*0.5H */
+  }
+
+            77% {
+                width:116px;
+                height:116px;
+                opacity: 0.2;
+                border-width:75px  /*0.7H */
+
+            }
+
+            100% {
+                width:440px;
+                height:440px;
+    opacity: 0;
+      border-width:40px  /*0.4H */
+
   }
 }
     </style>
