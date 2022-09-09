@@ -1,110 +1,59 @@
 <html>
-    <style>
-        body {
- 
-}
+<style>
+    .btn {
+        width: 200px; /*定义为W */
+        height: 50px; /*定义为H */
+        border-radius: 50px;
+        background: linear-gradient(101deg, rgba(3, 183, 182, 1) 0%, rgba(124, 164, 254, 1) 100%);
+    }
 
-.bubbles {
-  width: 580px; /*定义为W */
-  height: 100px; /*定义为H */
-  overflow: hidden;
-  position: relative;
-  border-radius: 50px;
-  background: linear-gradient(101deg, rgba(3,183,182,1) 0%, rgba(124,164,254,1) 100%);
-}
+    .bubbles {
+        overflow: hidden;
+        position: relative;
+    }
 
-.bubbles:after,
-.bubbles:before{
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border:25px solid #fff; /*0.5H */
-  border-radius:50%;
-  animation: animate 3s linear infinite;
-  left: 50%;
-  top:50%;
-  transform: translate(-50%,-50%);
-  opacity:0;
-}
-
-.bubbles:before {
-  animation-delay: 0s;
-}
-
-.bubbles:after {
-    animation: animate2 3s linear infinite;
-    animation-delay: 0.4s;
-
-}
+    .bubbles:after,
+    .bubbles:before {
+        content: "";
+        position: absolute;
+        display: block;
+        border-style: solid;
+        border-color:#fff;
+        border-radius: 50%;
+        animation: animate 3s linear infinite;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+    .bubbles:after {
+        animation-delay: 0.6s;
+    }
 
 
-@keyframes animate {
-  0% {
-    width:0;
-    height:0;
-    opacity: 0;
-    border-width:50px  /*0.5H */
+    @keyframes animate {
+        66% {
+            width: 34px; /*0.17W */
+            height: 34px; /*0.17W */
+            opacity: 0;
+            border-width: 25px /*0.5H */
+        }
 
-  }
-  66% {
-    width:0;
-    height:0;
-    opacity: 0;
-      border-width:50px  /*0.5H */
-  }
-  
-  77% {
-    width:116px;
-    height:116px;
-    opacity: 0.2;
-      border-width:75px  /*0.7H */
+        77% {
+            opacity: 0.2;
+            border-width: 35px /*0.7H */
+        }
 
-  }
-  
-  100% {
-    width:440px;
-    height:440px;
-    opacity: 0;
-      border-width:40px  /*0.4H */
-
-  }
-}
-        @keyframes animate2 {
-  0% {
-    width:0;
-    height:0;
-    opacity: 0;
-    border-width:50px  /*0.5H */
-
-  }
-  66% {
-    width:0;
-    height:0;
-    opacity: 0;
-      border-width:50px  /*0.5H */
-  }
-
-            77% {
-                width:116px;
-                height:116px;
-                opacity: 0.2;
-                border-width:75px  /*0.7H */
-
-            }
-
-            100% {
-                width:440px;
-                height:440px;
-    opacity: 0;
-      border-width:40px  /*0.4H */
-
-  }
-}
-    </style>
-  <body>
-    <div class="bubbles">
-    </div>
-  </body>
+        100% {
+            width: 150px; /*0.75W */
+            height: 150px; /*0.75W */
+            opacity: 0;
+            border-width: 20px /*0.4H */
+        }
+    }
+</style>
+<body>
+<div class="btn bubbles">
+</div>
+</body>
 </html>
